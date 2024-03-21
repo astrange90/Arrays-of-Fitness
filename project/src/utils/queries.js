@@ -10,11 +10,13 @@ export const GET_ME = gql`
       exerciseCount
       savedExercise {
         exerciseId
-        authors
-        image
-        description
-        title
-        link
+        type
+        name
+        duration
+        distance
+        weight
+        reps
+        sets
       }
     }
   }
