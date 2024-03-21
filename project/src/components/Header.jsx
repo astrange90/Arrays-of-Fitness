@@ -6,7 +6,7 @@ function Header() {
                     <nav class="navbar navbar-expand-lg custom_nav-container">
                         <a class="navbar-brand" href="index.html">
                             <span>
-                                Neogym
+                                Arrays of Fitness
                             </span>
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,14 +20,14 @@ function Header() {
                                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="why.html"> Why us </a>
+                                        <a class="nav-link" href="why.html"> About </a>
                                     </li>
                                     <li />
                                     <li class="nav-item">
-                                        <a class="nav-link" href="trainer.html"> trainers</a>
+                                        <a class="nav-link" href="trainer.html"> </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="contact.html"> Contact Us</a>
+                                        <a class="nav-link" href="contact.html"> Login</a>
                                     </li>
                                 </ul>
                                 <div class="user_option">
