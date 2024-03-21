@@ -2,7 +2,9 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require('bcrypt');
 
 // Define the schema for a user
+
 const workoutSchema = require('./Workout')
+
 
 const UserBuild = new Schema(
    {
@@ -35,9 +37,11 @@ const UserBuild = new Schema(
          required: true
       },
 
+      
       savedExercise: [workoutSchema],
    },
 
+   
    {
       toJSON: {
         virtuals: true,
