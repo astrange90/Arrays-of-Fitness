@@ -64,3 +64,5 @@ UserBuild.methods.isCorrectPassword = async function (password) {
 const User = model('User', UserBuild);
 
 module.exports = User;
+
+// 
