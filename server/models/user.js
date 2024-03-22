@@ -3,9 +3,6 @@ const bcrypt = require('bcrypt');
 
 // Define the schema for a user
 
-const workoutSchema = require('./Workout')
-
-
 const UserBuild = new Schema(
    {
       username: {
@@ -38,7 +35,10 @@ const UserBuild = new Schema(
       },
 
       
-      savedExercise: [workoutSchema],
+      savedExercise: [{
+         type:Schema.Types.ObjectId,
+         ref:'Workout'
+      }],
    },
 
    
