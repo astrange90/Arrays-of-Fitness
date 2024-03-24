@@ -2,11 +2,12 @@ const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
+const { authMiddleware } = require('./utils/auth')
+console.log(authMiddleware)
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const { authMiddleware } = require('./utils/auth')
-console.log(authMiddleware)
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -19,6 +20,10 @@ const startApolloServer = async () => {
 
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
+
+  app.use('/graphql', expressMiddleware(server, {
+    context: authMiddleware
+  }));
   
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
@@ -28,10 +33,6 @@ const startApolloServer = async () => {
     });
   }
   
-  app.use('/graphql', expressMiddleware(server, {
-    context: authMiddleware
-  }));
-
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
