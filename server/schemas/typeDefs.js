@@ -31,6 +31,7 @@ const typeDefs = `
     token: ID!
     user: User
   }
+  
   # Define which queries the front end is allowed to make and what data is returned
   type Query {
     workouts: [Workout]
