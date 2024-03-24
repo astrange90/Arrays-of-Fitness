@@ -31,7 +31,17 @@ const UserBuild = new Schema({
        type: Number,
        required: true
     },
-});
+      savedExercise: [{
+         type:Schema.Types.ObjectId,
+         ref:'Workout'
+      }],
+},
+    {
+      toJSON: {
+        virtuals: true,
+      },
+   }
+);
 
 // hash user password
 UserBuild.pre('save', async function (next) {
