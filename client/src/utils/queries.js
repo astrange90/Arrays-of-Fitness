@@ -1,6 +1,5 @@
-import gql from "graphql-tag";
+import { gql } from "@apollo/client";
 
-// need to update authors from list below
 export const GET_ME = gql`
   {
     me {
@@ -10,11 +9,13 @@ export const GET_ME = gql`
       exerciseCount
       savedExercise {
         exerciseId
-        authors
-        image
-        description
-        title
-        link
+        type
+        name
+        duration
+        distance
+        weight
+        reps
+        sets
       }
     }
   }

@@ -14,7 +14,7 @@ export const LOGIN_USER = gql`
 
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+    addUser(username: $username, email: $email, password: $password, age: $age, height: $height, weight: $weight) {
       token
       user {
         _id
@@ -32,17 +32,19 @@ export const SAVE_EXERCISE = gql`
       email
       savedExercise {
         exerciseId
-        authors
-        image
-        description
-        title
-        link
+        type
+        name
+        duration
+        distance
+        weight
+        reps
+        sets
       }
     }
   }
 `;
 
-export const REMOVE_Exercise = gql`
+export const REMOVE_EXERCISE = gql`
   mutation removeExercise($exerciseId: ID!) {
     removeExercise(exerciseId: $exerciseId) {
       _id
@@ -50,11 +52,13 @@ export const REMOVE_Exercise = gql`
       email
       savedExercise {
         exerciseId
-        authors
-        image
-        description
-        title
-        link
+        type
+        name
+        duration
+        distance
+        weight
+        reps
+        sets
       }
     }
   }
