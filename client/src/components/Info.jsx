@@ -1,14 +1,15 @@
+//Info.jsx
 function Info() {
     return (
-        <section class="info_section layout_padding2">
-            <div class="container">
-                <div class="info_items">
+        <section className="info_section layout_padding2">
+            <div className="container">
+                <div className="info_items">
                     <a href="">
-                        <div class="item ">
-                            <div class="img-box box-1">
+                        <div className="item ">
+                            <div className="img-box box-1">
                                 <img src="" alt="" />
                             </div>
-                            <div class="detail-box">
+                            <div className="detail-box">
                                 <p>
                                     Location
                                 </p>
@@ -16,11 +17,11 @@ function Info() {
                         </div>
                     </a>
                     <a href="">
-                        <div class="item ">
-                            <div class="img-box box-2">
+                        <div className="item ">
+                            <div className="img-box box-2">
                                 <img src="" alt="" />
                             </div>
-                            <div class="detail-box">
+                            <div className="detail-box">
                                 <p>
                                     +02 1234567890
                                 </p>
@@ -28,11 +29,11 @@ function Info() {
                         </div>
                     </a>
                     <a href="">
-                        <div class="item ">
-                            <div class="img-box box-3">
+                        <div className="item ">
+                            <div className="img-box box-3">
                                 <img src="" alt="" />
                             </div>
-                            <div class="detail-box">
+                            <div className="detail-box">
                                 <p>
                                     demo@gmail.com
                                 </p>
