@@ -1,21 +1,21 @@
 function WhyUs() {
     return (
-        <section class="us_section layout_padding">
-            <div class="container">
-                <div class="heading_container">
+        <section className="us_section layout_padding">
+            <div className="container">
+                <div className="heading_container">
                     <h2>
                         Why Choose Us
                     </h2>
                 </div>
 
-                <div class="us_container ">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="images/u-1.png" alt=""/>
+                <div className="us_container ">
+                    <div className="row">
+                        <div className="col-lg-3 col-md-6">
+                            <div className="box">
+                                <div className="img-box">
+                                    <img src="./build/images/u-1.png" alt=""/>
                                 </div>
-                                <div class="detail-box">
+                                <div className="detail-box">
                                     <h5>
                                         QUALITY EQUIPMENT
                                     </h5>
@@ -25,12 +25,12 @@ function WhyUs() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="images/u-4.png" alt=""/>
+                        <div className="col-lg-3 col-md-6">
+                            <div className="box">
+                                <div className="img-box">
+                                    <img src="./build/images/u-4.png" alt=""/>
                                 </div>
-                                <div class="detail-box">
+                                <div className="detail-box">
                                     <h5>
                                         NUTRITION
                                     </h5>
@@ -40,12 +40,12 @@ function WhyUs() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="images/u-2.png" alt=""/>
+                        <div className="col-lg-3 col-md-6">
+                            <div className="box">
+                                <div className="img-box">
+                                    <img src="./build/images/u-2.png" alt=""/>
                                 </div>
-                                <div class="detail-box">
+                                <div className="detail-box">
                                     <h5>
                                         HEALTHY DIET PLAN
                                     </h5>
@@ -55,12 +55,12 @@ function WhyUs() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="box">
-                                <div class="img-box">
-                                    <img src="images/u-3.png" alt=""/>
+                        <div className="col-lg-3 col-md-6">
+                            <div className="box">
+                                <div className="img-box">
+                                    <img src="./build/images/u-3.png" alt=""/>
                                 </div>
-                                <div class="detail-box">
+                                <div className="detail-box">
                                     <h5>
                                         SPORT TRAINING
                                     </h5>
