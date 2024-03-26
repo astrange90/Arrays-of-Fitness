@@ -1,3 +1,4 @@
+//Contact.jsx
 function Contact() {
     return (
         <section className="contact_section ">
