@@ -1,7 +1,9 @@
-//Info.jsx
+// Info.jsx
+import React from 'react';
+
 function Info() {
     return (
-        <section className="info_section layout_padding2">
+        <section id="about" className="info_section layout_padding2">
             <div className="container">
                 <div className="info_items">
                     <a href="">
@@ -43,7 +45,7 @@ function Info() {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Info;
