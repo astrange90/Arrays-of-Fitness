@@ -1,4 +1,4 @@
-const { Workout } = require('../models');
+const { Workout, User } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 // Create the functions that fulfill the queries defined in `typeDefs.js`
