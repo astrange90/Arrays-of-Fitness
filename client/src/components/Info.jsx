@@ -13,7 +13,7 @@ function Info() {
                             </div>
                             <div className="detail-box">
                                 <p>
-                                    Location
+                                    Los Angeles, CA
                                 </p>
                             </div>
                         </div>
@@ -25,7 +25,7 @@ function Info() {
                             </div>
                             <div className="detail-box">
                                 <p>
-                                    +02 1234567890
+                                    (555) 555-5555
                                 </p>
                             </div>
                         </div>
@@ -37,7 +37,7 @@ function Info() {
                             </div>
                             <div className="detail-box">
                                 <p>
-                                    demo@gmail.com
+                                    Arrays.Of.Fitness@AOF.com
                                 </p>
                             </div>
                         </div>
