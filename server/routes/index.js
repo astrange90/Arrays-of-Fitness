@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const workoutRoutes = require('./workout-routes');
-const userRoutes = require('./user-routes');
+const apiRoutes = require('./api');
 
-router.use('/users', userRoutes);
-router.use('/workouts', workoutRoutes);
+router.use('/api', apiRoutes);
+
+router.use((req, res) => {
+    res.sendFile(path.join(__dirname, '../../client/build/index.html'));
+});
 
 module.exports = router;
