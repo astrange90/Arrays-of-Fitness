@@ -1,5 +1,3 @@
-//LoginPage.jsx
-// see SignupForm.js for comments
 import React, { useState, useEffect } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 
@@ -55,7 +53,8 @@ const LoginPage = () => {
   };
 
   return (
-    <>
+    <div className="container mt-5">
+      <h2>Login</h2>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -65,14 +64,14 @@ const LoginPage = () => {
         >
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
+        <Form.Group controlId="email">
+          <Form.Label>Email</Form.Label>
           <Form.Control
-            type="text"
+            type="email"
             placeholder="Your email"
             name="email"
-            onChange={handleInputChange}
             value={userFormData.email}
+            onChange={handleInputChange}
             required
           />
           <Form.Control.Feedback type="invalid">
@@ -80,14 +79,14 @@ const LoginPage = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
+        <Form.Group controlId="password">
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Your password"
             name="password"
-            onChange={handleInputChange}
             value={userFormData.password}
+            onChange={handleInputChange}
             required
           />
           <Form.Control.Feedback type="invalid">
@@ -95,14 +94,14 @@ const LoginPage = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(userFormData.email && userFormData.password)}
+          variant="primary"
           type="submit"
-          variant="success"
+          disabled={!(userFormData.email && userFormData.password)}
         >
           Submit
         </Button>
       </Form>
-    </>
+    </div>
   );
 };
 

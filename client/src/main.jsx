@@ -1,17 +1,15 @@
-// main.jsx
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client instead of react-dom
+import { ApolloProvider } from '@apollo/client';
+import { createApolloClient } from './utils/apollo';
+import App from './App';
 
-if (process.env.NODE_ENV !== "production") {
-  
-  loadDevMessages();
-  loadErrorMessages();
-}
+const client = createApolloClient();
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>
 );

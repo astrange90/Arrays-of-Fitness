@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Info from './components/Info';
 import Footer from './components/Footer';
 import LoginPage from './components/LoginPage'; 
+import SignupPage from './components/SignupPage';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <div>
         <Header />
         <Routes> 
+          <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<Info />} />
           <Route path="/trainer" element={<Trainer />} />

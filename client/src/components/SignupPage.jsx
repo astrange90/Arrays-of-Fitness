@@ -60,8 +60,8 @@ const SignupPage = () => {
   };
 
   return (
-    <>
-      {/* This is needed for the validation functionality above */}
+    <div className="container mt-5">
+      <h2>Signup</h2>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert
@@ -73,8 +73,8 @@ const SignupPage = () => {
           Something went wrong with your signup!
         </Alert>
 
-        <Form.Group>
-          <Form.Label htmlFor="username">Username</Form.Label>
+        <Form.Group controlId="username">
+          <Form.Label>Username</Form.Label>
           <Form.Control
             type="text"
             placeholder="Your username"
@@ -88,8 +88,8 @@ const SignupPage = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
+        <Form.Group controlId="email">
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Your email address"
@@ -103,8 +103,8 @@ const SignupPage = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
+        <Form.Group controlId="password">
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Your password"
@@ -126,12 +126,12 @@ const SignupPage = () => {
             )
           }
           type="submit"
-          variant="success"
+          variant="primary"
         >
           Submit
         </Button>
       </Form>
-    </>
+    </div>
   );
 };
 
