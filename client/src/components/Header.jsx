@@ -32,7 +32,7 @@ function Header() {
                                         <NavLink className="nav-link" to="/about" onClick={handleNavLinkClick}>About</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <NavLink className="nav-link" to="/trainer" onClick={handleNavLinkClick}>Trainer</NavLink>
+                                        <NavLink className="nav-link" to="/trainer" onClick={handleNavLinkClick}>Trainers</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>Contact Us</NavLink>
@@ -66,42 +66,19 @@ function Header() {
                                         <div>
                                             <h3>Fitness</h3>
                                             <h2>Training</h2>
-                                            <h1>Neogym</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                                            <div className="">
+                                            <h1>Arrays Of Fitness</h1>
+                                            <p>Welcome to Arrays of Fitness. We know getting in shape is not easy, whether you're looking to loose weight or want to tone your muslces.
+                                                You've come to the right site! <br/>
+                                                We provide a space for individulas to log their workouts. We also provide services with personal trainers to help get you reach your health goals. </p>
+                                            {/* <div className="">
                                                 <a href="">Contact Us</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* Add IDs to sections */}
-                        <div id="about" className="carousel-item"> {/* Add ID to the "about" section */}
-                            <div className="container">
-                                <div className="col-lg-10 col-md-11 mx-auto">
-                                    <div className="detail-box">
-                                        <div>
-                                            <h3>Fitness</h3>
-                                            <h2>Training</h2>
-                                            <h1>Neogym</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                                            <div className="">
-                                                <a href="">Contact Us</a>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <ol className="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    </ol>
                 </div>
             </section>
         </div>
