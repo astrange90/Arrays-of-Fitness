@@ -29,7 +29,7 @@ function Header() {
                             <div className="d-flex ml-auto flex-column flex-lg-row align-items-center">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <NavLink className="nav-link" to="/about" onClick={handleNavLinkClick}>About</NavLink>
+                                        <NavLink className="nav-link" to="/home" onClick={handleNavLinkClick}>Home</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/trainer" onClick={handleNavLinkClick}>Trainers</NavLink>
@@ -43,10 +43,13 @@ function Header() {
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/signup" onClick={handleNavLinkClick}>Signup</NavLink>
                                     </li>
+                                    <li className="nav-item">
+                                        <NavLink className="nav-link" to="/newentry" onClick={handleNavLinkClick}>+ Workouts</NavLink>
+                                    </li>
                                 </ul>
                                 <div className="user_option">
                                     <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                        <button className="btn my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                                        
                                     </form>
                                 </div>
                             </div>
@@ -67,9 +70,9 @@ function Header() {
                                             <h3>Fitness</h3>
                                             <h2>Training</h2>
                                             <h1>Arrays Of Fitness</h1>
-                                            <p>Welcome to Arrays of Fitness. We know getting in shape is not easy, whether you're looking to loose weight or want to tone your muslces.
+                                            <p>Welcome to Arrays of Fitness. We know getting in shape is not easy, whether you're looking to lose weight or want to tone your muscles.
                                                 You've come to the right site! <br />
-                                                We provide a space for individulas to log their workouts. We also provide services with personal trainers to help get you reach your health goals. </p>
+                                                We provide a space for individuals to log their workouts. We also provide services with personal trainers to help get you to reach your health goals. </p>
                                             {/* <div className="">
                                                 <a href="">Contact Us</a>
                                             </div> */}

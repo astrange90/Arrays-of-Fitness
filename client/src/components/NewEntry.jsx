@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 
 
 function NewEntry() {
-    const [userFormData, setUserFormData] = useState({ type: "", name: "" , duration: ""});
+    const [userFormData, setUserFormData] = useState({ type: "", name: "", duration: "" });
     const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [workout, { error }] = useMutation(SAVE_EXERCISE);
@@ -55,7 +55,7 @@ function NewEntry() {
     };
     return (
         <div className="container mt-5">
-            <h2>New Workout Entry</h2>
+            <h2>+ Workout Tracker</h2>
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <Alert
                     dismissible
@@ -65,26 +65,11 @@ function NewEntry() {
                 >
                     Something went wrong with your Workout Entry!
                 </Alert>
-                <Form.Group controlId="type">
-                    <Form.Label>Type of Workout</Form.Label>
-                    <Form.Control
-                        type="type"
-                        placeholder="Workout Type"
-                        name="type"
-                        value={userFormData.type}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Workout type is required!
-                    </Form.Control.Feedback>
-                </Form.Group>
-
                 <Form.Group controlId="name">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>Name of Workout</Form.Label>
                     <Form.Control
                         type="Name"
-                        placeholder="Name of Workout"
+                        placeholder="Benchpress, Situps, Treadmill etc."
                         name="Name"
                         value={userFormData.name}
                         onChange={handleInputChange}
@@ -93,6 +78,20 @@ function NewEntry() {
                     <Form.Control.Feedback type="invalid">
                         Name of workout is required!
                     </Form.Control.Feedback>
+                
+                    <Form.Group controlId="type">
+                        <Form.Label>Type</Form.Label>
+                        <Form.Control
+                            type="distance"
+                            placeholder="Upper Body, Lower Body, Arms, etc."
+                            name="distance"
+                            value={userFormData.type}
+                            onChange={handleInputChange}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                        Duration of workout is required!
+                    </Form.Control.Feedback>
+                    </Form.Group>
                 </Form.Group>
                 <Form.Group controlId="duration">
                     <Form.Label>Duration</Form.Label>
@@ -121,8 +120,8 @@ function NewEntry() {
                 <Form.Group controlId="weight">
                     <Form.Label>Weight</Form.Label>
                     <Form.Control
-                        type="weight"
-                        placeholder="Weight of equipment"
+                        type="Weight"
+                        placeholder="0-500"
                         name="weight"
                         value={userFormData.weight}
                         onChange={handleInputChange}
@@ -132,7 +131,7 @@ function NewEntry() {
                     <Form.Label>Reps</Form.Label>
                     <Form.Control
                         type="reps"
-                        placeholder="Reps of Workout"
+                        placeholder="# of reps"
                         name="reps"
                         value={userFormData.reps}
                         onChange={handleInputChange}
@@ -142,7 +141,7 @@ function NewEntry() {
                     <Form.Label>Sets</Form.Label>
                     <Form.Control
                         type="Name"
-                        placeholder="Name of Workout"
+                        placeholder="# of sets"
                         name="Name"
                         value={userFormData.sets}
                         onChange={handleInputChange}
