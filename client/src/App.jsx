@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import {
   ApolloClient,
@@ -40,11 +40,25 @@ import Footer from './components/Footer';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import SavedWorkouts from './components/SavedWorkouts';
+import LoggedIn from './components/LoggedIn';
+import NewEntry from './components/NewEntry';
+import auth from './utils/auth';
 
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter>
+      {/* {auth.loggedIn() ? (
+                <>
+                  <Nav.Link as={Link} to='/newentry'>
+                    New Entry 
+                  </Nav.Link>
+                  <Nav.Link as={Link} to='/savedworkout'>Saved Workouts</Nav.Link>
+                  <Nav.Link onClick={auth.logout} as={Link} to='/'>Logout</Nav.Link>
+                </>
+              ) : (
+                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+              )} */}
+        < BrowserRouter >
         <div>
           <Header />
           <Routes>
@@ -54,17 +68,20 @@ export default function App() {
             <Route path="/trainer" element={<Trainer />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/" element={<Home />} />
+            <Route path="/loggedin" element={<LoggedIn />} />
+            <Route path="/savedworkout" element={<SavedWorkouts />} />
+            <Route path="/newentry" element={<NewEntry />} />
           </Routes>
           <Footer />
         </div>
       </BrowserRouter>
-    </ApolloProvider>
+    </ApolloProvider >
   );
 }
 
 function Home() {
   return (
-    <React.Fragment> 
+    <React.Fragment>
       <Element name="trainer">
         <Trainer />
       </Element>

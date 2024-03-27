@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import auth from '../utils/auth';
 
-function Header() {
+function LoggedIn() {
     const scrollToBottom = () => {
         window.scrollTo({
             top: document.documentElement.scrollHeight,
@@ -38,10 +39,10 @@ function Header() {
                                         <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>Contact Us</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <NavLink className="nav-link" to="/login" onClick={handleNavLinkClick}>Login</NavLink>
+                                        <NavLink className="nav-link" to="/savedworkout" onClick={handleNavLinkClick}>SavedWorkouts</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <NavLink className="nav-link" to="/signup" onClick={handleNavLinkClick}>Signup</NavLink>
+                                        <Nav.Link onClick={auth.logout} className="nav-link" to="/">Logout</Nav.Link>
                                     </li>
                                 </ul>
                                 <div className="user_option">
@@ -85,4 +86,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default LoggedIn;
