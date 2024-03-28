@@ -19,6 +19,7 @@ const typeDefs = `
   type Exercise {
   _id: ID
   name: String
+  type: String
   duration: Int
   distance: Int
   weight: Int

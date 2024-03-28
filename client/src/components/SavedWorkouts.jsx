@@ -9,13 +9,13 @@ import {
 
 // import { getMe, deleteBook } from '../utils/API';
 import { useMutation } from '@apollo/client';
-import { REMOVE_EXERCISE } from '../utils/mutations';
+
 import auth from '../utils/auth';
-import { removeWorkoutID } from '../utils/localStorage';
+
 
 const SavedWorkouts = () => {
   const [userData, setUserData] = useState({});
-  const [removeExercise] = useMutation(REMOVE_EXERCISE);
+  
 
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;

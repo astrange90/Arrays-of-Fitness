@@ -25,40 +25,36 @@ export const ADD_USER = gql`
 `;
 // need to update authors from list below
 export const SAVE_EXERCISE = gql`
-  mutation saveExercise($exerciseData: ExerciseInput!) {
+  mutation saveExercise($exerciseData: ExerciseInput!, $addExerciseId: ID!) {
     saveExercise(exerciseData: $exerciseData) {
       _id
-      username
-      email
-      savedExercise {
-        exerciseId
-        type
-        name
-        duration
-        distance
-        weight
-        reps
-        sets
+      day
+      exercises {
+      _id
+      name
+      duration
+      distance
+      weight
+      reps
+      sets
       }
     }
   }
 `;
 
 export const REMOVE_EXERCISE = gql`
-  mutation removeExercise($exerciseId: ID!) {
-    removeExercise(exerciseId: $exerciseId) {
+  mutation removeExercise($exerciseId: ID!, $removeExerciseId: ID!) {
+    removeExercise(exerciseId: $exerciseId, id: $removeExerciseId) {
       _id
-      username
-      email
-      savedExercise {
-        exerciseId
-        type
-        name
-        duration
-        distance
-        weight
-        reps
-        sets
+      day
+      exercises {
+      _id
+      name
+      duration
+      distance
+      weight
+      reps
+      sets
       }
     }
   }

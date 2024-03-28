@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 
 
 function NewEntry() {
-    const [userFormData, setUserFormData] = useState({ type: "", name: "" , duration: ""});
+    const [userFormData, setUserFormData] = useState({});
     const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [workout, { error }] = useMutation(SAVE_EXERCISE);
@@ -21,8 +21,9 @@ function NewEntry() {
     }, [error]);
     // Need to check validity 
     const handleInputChange = (event) => {
-        const { workout, value } = event.target;
-        setUserFormData({ ...userFormData, [workout]: value });
+        const { name, value } = event.target;
+        console.log(event.target.type);
+        setUserFormData({ ...userFormData, [name]: value });
     };
 
     const handleFormSubmit = async (event) => {
@@ -47,15 +48,11 @@ function NewEntry() {
         }
 
         // clear form values
-        setUserFormData({
-            type: "",
-            name: "",
-            duration: "",
-        });
+        setUserFormData({});
     };
     return (
         <div className="container mt-5">
-            <h2>New Workout Entry</h2>
+            <h2>+ Workout Tracker</h2>
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <Alert
                     dismissible
@@ -65,34 +62,33 @@ function NewEntry() {
                 >
                     Something went wrong with your Workout Entry!
                 </Alert>
-                <Form.Group controlId="type">
-                    <Form.Label>Type of Workout</Form.Label>
-                    <Form.Control
-                        type="type"
-                        placeholder="Workout Type"
-                        name="type"
-                        value={userFormData.type}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                        Workout type is required!
-                    </Form.Control.Feedback>
-                </Form.Group>
-
                 <Form.Group controlId="name">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>Name of Workout</Form.Label>
                     <Form.Control
-                        type="Name"
-                        placeholder="Name of Workout"
-                        name="Name"
+                        type="name"
+                        placeholder="Benchpress, Situps, Treadmill etc."
+                        name="name"
                         value={userFormData.name}
                         onChange={handleInputChange}
-                        required
+                    
                     />
                     <Form.Control.Feedback type="invalid">
                         Name of workout is required!
                     </Form.Control.Feedback>
+                
+                    <Form.Group controlId="type">
+                        <Form.Label>Type</Form.Label>
+                        <Form.Control
+                            type="type"
+                            placeholder="Upper Body, Lower Body, Arms, etc."
+                            name="type"
+                            value={userFormData.type}
+                            onChange={handleInputChange}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                        Duration of workout is required!
+                    </Form.Control.Feedback>
+                    </Form.Group>
                 </Form.Group>
                 <Form.Group controlId="duration">
                     <Form.Label>Duration</Form.Label>
@@ -102,7 +98,7 @@ function NewEntry() {
                         name="duration"
                         value={userFormData.duration}
                         onChange={handleInputChange}
-                        required
+                        
                     />
                     <Form.Control.Feedback type="invalid">
                         Duration of workout is required!
@@ -111,7 +107,7 @@ function NewEntry() {
                 <Form.Group controlId="distance">
                     <Form.Label>Distance</Form.Label>
                     <Form.Control
-                        type="Distance"
+                        type="distance"
                         placeholder="Distance of Workout"
                         name="distance"
                         value={userFormData.distance}
@@ -121,8 +117,8 @@ function NewEntry() {
                 <Form.Group controlId="weight">
                     <Form.Label>Weight</Form.Label>
                     <Form.Control
-                        type="weight"
-                        placeholder="Weight of equipment"
+                        type="Weight"
+                        placeholder="0-500"
                         name="weight"
                         value={userFormData.weight}
                         onChange={handleInputChange}
@@ -132,7 +128,7 @@ function NewEntry() {
                     <Form.Label>Reps</Form.Label>
                     <Form.Control
                         type="reps"
-                        placeholder="Reps of Workout"
+                        placeholder="# of reps"
                         name="reps"
                         value={userFormData.reps}
                         onChange={handleInputChange}
@@ -141,9 +137,9 @@ function NewEntry() {
                 <Form.Group controlId="sets">
                     <Form.Label>Sets</Form.Label>
                     <Form.Control
-                        type="Name"
-                        placeholder="Name of Workout"
-                        name="Name"
+                        type="name"
+                        placeholder="# of sets"
+                        name="sets"
                         value={userFormData.sets}
                         onChange={handleInputChange}
                     />
