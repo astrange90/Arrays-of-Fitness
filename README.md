@@ -23,5 +23,8 @@ By using Apollo/GraphQL, we can ensure that our application remains scalable, ma
 
 - **Node.js, Apollo/GraphQL, and Mongodb**: Using these technologies we created a server-side run environment. This helps create web applications that can handle several operations at the same time.
 
+## Website Visual 
+![Website landing page](image.png)
+
 ## Contributors
 [mcast094](https://github.com/mcast094), [astrange90](https://github.com/astrange90), [timvandeusen](https://github.com/timvandeusen), [Isiarf](https://github.com/Isiarf)
